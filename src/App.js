@@ -1135,7 +1135,6 @@ function ClassListView({ gradeData, onBack, onSelectClass }) {
     const subjects = Object.values(classData.subjects || {});
     const allUnits = subjects.flatMap((s) => s.units || []);
     const { pct }  = calcProgress(allUnits);
-    const color    = progressColor(pct);
     return (
       <Card key={classId} onClick={() => onSelectClass(classId)} style={{ marginBottom: 10 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
